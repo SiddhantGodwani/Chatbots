@@ -1,0 +1,9 @@
+import openai
+#before doing this go to terminal >> new terminal>> 'pip install openai'(installing openai)
+#or use>> pip3 install openai
+# also mere case me pip upgrade krna pada tha using {python.exe -m pip install --upgrade pip}
+
+openai.api_key = "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"
+
+completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Give me 3 ideas for apps I could build with openai apis "}])
+print(completion.choices[0].message.content)
